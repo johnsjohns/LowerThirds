@@ -14,12 +14,13 @@ body {
 
 #main {
     display:flex;
-    background-color: #001100;
+    
 }
 
 .icon{
     width: 40px;
     margin-right:10px;
+    margin-left: 10px;
     background: transparent;
     cursor: pointer;
     overflow: hidden;
@@ -50,9 +51,28 @@ body {
   
 }
 
+.direita {
+    animation: right 3s;
+}
+
+.esquerda{
+    animation: left 3s;
+    animation-fill-mode: forwards;
+}
+
 
 @keyframes destaque{
     0%{  transform: translateX(-200%) rotate(45deg);}
     50%{ transform: translateX(100%) rotate(45deg);}
     100%{  transform: translateX(-200%) rotate(45deg);}
+}
+
+@keyframes right {
+    from { transform: translatex(-100%);}
+    to { transform: translateX(0);}
+}
+
+@keyframes left {
+    from { transform: translatex(0);}
+    to { transform: translateX(-100%);}
 }

@@ -1,0 +1,24 @@
+#main{
+    display: flex;
+    width: 200%;
+}
+
+.icon{
+    width: 40px;
+    margin-right:10px;
+}
+
+.texto{
+    margin-right: 60px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+
+}
+
+.marquee{
+    animation: marquee 30s infinite linear;
+}
+@keyframes marquee {
+    0%   { transform: translate(100%, 0); }
+    100% { transform: translate(-100%, 0); }
+}

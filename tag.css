@@ -1,0 +1,58 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background:transparent;
+}
+
+#main {
+    display:flex;
+    background-color: #001100;
+}
+
+.icon{
+    width: 40px;
+    margin-right:10px;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    
+}
+.icon::after{
+    
+    content: ' ';
+    width: 600%;
+    height: 40%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: destaque 5s infinite;
+  
+}
+
+
+.texto{
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    color: #EEffff;
+  
+}
+
+
+@keyframes destaque{
+    0%{  transform: translateX(-200%) rotate(45deg);}
+    50%{ transform: translateX(100%) rotate(45deg);}
+    100%{  transform: translateX(-200%) rotate(45deg);}
+}

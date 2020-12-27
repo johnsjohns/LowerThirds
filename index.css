@@ -6,13 +6,52 @@
 .icon{
     width: 40px;
     margin-right:10px;
+    
 }
+
+.tag_icon{
+    width: 40px;
+    margin-right:10px;
+    background: transparent;
+    overflow: hidden;
+    z-index: -1;
+}
+.tag_icon::after{
+    
+    content: ' ';
+    width: 40px;
+    height: 1%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: destaque 20s infinite;
+    z-index: 0;
+}
+
 
 .texto{
     margin-right: 60px;
     font-family: 'Roboto Slab', serif;
     font-size: 30px;
+    color: blue;
+    z-index: 1;
 
+}
+
+
+#tag_main{
+    display: flex;
+}
+
+.tag_texto{
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    color: blue;
+    z-index: 1;
 }
 
 .marquee{
@@ -21,4 +60,11 @@
 @keyframes marquee {
     0%   { transform: translate(100%, 0); }
     100% { transform: translate(-100%, 0); }
+}
+
+@keyframes destaque{
+    0%{  transform: translateX(-100%) rotate(45deg);}
+    25%{ transform: translateX(100%) rotate(45deg);}
+    50%{  transform: translateX(-100%) rotate(45deg);}
+    100%{ transform: translateX(100%) rotate(45deg);}
 }
